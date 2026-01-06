@@ -1,7 +1,7 @@
 # Project Brief
 
-**Student:** [Your Name]  
-**Handle:** @[your-github-username]  
+**Student:** Sara Love Gancedo
+**Handle:** @saralovegn
 **Course:** Web Design 2025 · Fall  
 **Date:** [Fill in date - Week 2]
 
@@ -11,15 +11,15 @@
 
 ### What are you building?
 
-<!-- Describe your project in 2-3 sentences -->
+I am building a personal portfolio website that showcases my projects and skills in a visually impactful way. The site emphasizes a clean, modern design with dark mode, animations, and interactive elements.
 
 ### Who is it for?
 
-<!-- Define your target audience -->
+This portfolio is aimed at potential employers, collaborators, and an international audience, particularly English-speaking users interested in my work.
 
 ### Why does it matter?
 
-<!-- Explain the purpose and value of your project -->
+The portfolio serves as a professional showcase of my projects, design sensibilities, and technical skills. It highlights my ability to customize templates, create interactive features, and maintain a cohesive visual identity.
 
 ---
 
@@ -55,19 +55,20 @@
 
 ### Key Sections/Pages
 
-1.
-2.
+1. Projects
+2. About Me
 3.
 
 ### Content Sources
 
-<!-- Where will your content come from? -->
+All content is created personal and original, including images, project descriptions, and texts.
+Some help has been requested to either Copilot or ChatGPT for general questions or difficuslt problem solving tasks.
 
 ### Multilingual Considerations
 
-- Primary language:
-- Secondary language (optional):
-- Translation strategy:
+- Primary language: English
+- Secondary language (optional): Spanish
+- Translation strategy: N/A
 
 ---
 
@@ -75,7 +76,7 @@
 
 ### Visual Style
 
-<!-- Describe your aesthetic approach -->
+The design is visually rich, focusing on dark mode with accent colors, interactive hover effects, and subtle animations to enhance engagement. Each section is intended to be immersive and visually striking.
 
 ### Color Palette
 
