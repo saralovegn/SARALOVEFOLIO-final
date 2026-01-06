@@ -97,7 +97,7 @@
 	--color-text: #f5f5f5;            /* Off-white for readability (not pure white) */
 	--color-text-muted: #ffe2f1;      /* Subdued text for secondary content */
 	--color-accent: #ffa1d0;          /* Indigo — primary brand color */
-	--color-accent-hover: #ff55aa;    /* Lighter indigo for hover states */
+	--color-accent-hover: #ff47a3;    /* Lighter indigo for hover states */
 
 	/*
 	 * ANIMATION TOKENS
