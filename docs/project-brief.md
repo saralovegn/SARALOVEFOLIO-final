@@ -80,7 +80,12 @@ The design is visually rich, focusing on dark mode with accent colors, interacti
 
 ### Color Palette
 
-<!-- List your main colors -->
+--color-bg: #131313;            /* as the base gives the site a true dark foundation. */
+--color-bg-alt: #242424;        /* adds depth and visual separation for sections, cards, or hoverable elements. */
+--color-text: #f5f5f5;          /* creates hierarchy — primary content stands out, secondary content recedes. */
+--color-text-muted: #ffe2f1;    /* creates hierarchy — primary content stands out, secondary content recedes. */
+--color-accent: #ffa1d0;        /* draw attention to interactive elements like buttons and links. */
+--color-accent-hover: #ff47a3;  /* draws even more attention to now click on interactive elements like buttons. */
 
 ### Typography
 

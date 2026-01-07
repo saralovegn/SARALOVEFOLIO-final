@@ -44,6 +44,12 @@
    -------------------------------------------------------------------------- */
 :root {
 	/*
+	 * Import Google fonts used sitewide.
+	 * Added: BBH Bogle, Poppins, Ubuntu Mono, Zalando Sans Expanded
+	 */
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+	/*
 	 * FLUID TYPOGRAPHY SCALE
 	 *
 	 * This creates a harmonious type scale that smoothly adjusts between
@@ -67,9 +73,13 @@
 	 * value when referencing the token to remain resilient in older setups.
 	 */
     /* ===== TYPOGRAPHY ===== */
-    --font-sans: 'Noto Sans', sans-serif;
-    --font-serif: 'Garamond', serif;
-    --font-mono: 'Ubuntu Mono', monospace;
+	--font-display: 'BBH Bogle', 'Poppins', 'Noto Sans', sans-serif;
+	--letter-spacing-display: 0.08em; /* increased kerning for display headings */
+
+	/* Body / UI sans stack: prefer Helvetica for body text per request */
+	--font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-serif: 'Garamond', serif;
+	--font-mono: 'Ubuntu Mono', monospace;
 
 	/*
 	 * FLUID SPACING SCALE
