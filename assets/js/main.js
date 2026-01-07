@@ -414,3 +414,24 @@ window.cleanupScrollObservers = () => {
 	staggerObserver.disconnect();
 	console.log('🧹 Observers cleaned up');
 };
+
+/* --------------------------------------------------------------------------
+   CONTACT PARALLAX VIDEO (ACCESSIBLE)
+   -------------------------------------------------------------------------- */
+
+const contactSection = document.querySelector('.contact-parallax');
+const contactVideo = document.querySelector('.contact-video');
+
+// Respect prefers-reduced-motion
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (contactSection && contactVideo && !prefersReducedMotion.matches) {
+	const speed = 0.3; // lower = slower movement
+
+	window.addEventListener('scroll', () => {
+		const rect = contactSection.getBoundingClientRect();
+		const offset = rect.top * speed;
+
+		contactVideo.style.transform = `translateY(${offset}px)`;
+	});
+}
