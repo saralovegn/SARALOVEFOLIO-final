@@ -339,8 +339,56 @@ document.addEventListener('DOMContentLoaded', () => {
 	initSmoothScroll();
 	initActiveNav();
 
+	// Initialize mobile hamburger navigation
+	initMobileNav();
+
 	console.log('🚀 Grade 1 Demo: Vanilla scroll animations initialized');
 });
+
+// ==========================================================================
+// 6. MOBILE NAVIGATION (HAMBURGER)
+// ==========================================================================
+function initMobileNav() {
+	const nav = document.querySelector('.nav');
+	const toggle = document.querySelector('.nav-toggle');
+	const menu = document.getElementById('primary-navigation');
+
+	if (!toggle || !menu || !nav) return;
+
+	// Toggle menu open/closed
+	const setOpen = (open) => {
+		toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+		if (open) {
+			nav.classList.add('nav-open');
+			menu.classList.add('open');
+		} else {
+			nav.classList.remove('nav-open');
+			menu.classList.remove('open');
+		}
+	};
+
+	toggle.addEventListener('click', () => {
+		const expanded = toggle.getAttribute('aria-expanded') === 'true';
+		setOpen(!expanded);
+	});
+
+	// Close when a menu link is clicked (mobile behavior)
+	menu.querySelectorAll('a').forEach((link) => {
+		link.addEventListener('click', () => setOpen(false));
+	});
+
+	// Close on Escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') setOpen(false);
+	});
+
+	// Close the menu when clicking outside (optional but user-friendly)
+	document.addEventListener('click', (e) => {
+		if (!nav.contains(e.target) && toggle.getAttribute('aria-expanded') === 'true') {
+			setOpen(false);
+		}
+	});
+}
 
 // ==========================================================================
 // 6. CLEANUP (FOR SPA ENVIRONMENTS)

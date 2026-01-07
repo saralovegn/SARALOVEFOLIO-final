@@ -16,14 +16,24 @@
 	<a href="#main" class="skip-link">Skip to main content</a>
 
 	<!-- Navigation -->
-	<nav class="nav">
+	<nav class="nav" role="navigation" aria-label="Primary">
 		<div class="nav-container">
 			<a href="#" class="nav-logo">SARA LOVE</a>
-			<ul class="nav-links">
-				<li><a href="#hero">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Work</a></li>
-				<li><a href="#contact">Contact</a></li>
+
+			<!-- Hamburger (visible on small screens) -->
+			<button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+				<span class="hamburger" aria-hidden="true">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+
+			<ul id="primary-navigation" class="nav-links" role="menu">
+				<li role="none"><a role="menuitem" href="#hero">Home</a></li>
+				<li role="none"><a role="menuitem" href="#about">About</a></li>
+				<li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+				<li role="none"><a role="menuitem" href="#contact">Contact</a></li>
 			</ul>
 		</div>
 	</nav>

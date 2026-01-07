@@ -26,17 +26,110 @@
 }
 
 .nav-links {
-	display: flex;
-	gap: var(--space-lg);
 	list-style: none;
+    display: flex;
+    gap: var(--space-lg);
 }
 
 .nav-links a {
 	color: var(--color-text-muted);
-	transition: color 0.3s;
+	transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
 	color: var(--color-accent);
+	outline: none;
+	text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile-first hamburger menu
+   -------------------------------------------------------------------------- */
+.nav-toggle {
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	background: transparent;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	margin-left: 0.75rem;
+	cursor: pointer;
+	color: var(--color-text);
+}
+
+.hamburger {
+	display: inline-block;
+	width: 1.25rem;
+	height: 1rem;
+	position: relative;
+}
+.hamburger span {
+	display: block;
+	height: 2px;
+	background: var(--color-text);
+	margin: 0.18rem 0;
+	transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* Mobile: hide links, show collapsed slide-down menu */
+.nav-links {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: calc(var(--space-md) + 100%);
+	background: var(--color-bg-alt); /* #242424 */
+	flex-direction: column;
+	gap: 0;
+	padding: 0;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.35s ease, padding 0.25s ease;
+}
+.nav-links li {
+	border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.nav-links a {
+	display: block;
+	padding: 0.85rem 1rem;
+	color: var(--color-text);
+}
+.nav-links a:hover,
+.nav-links a:focus {
+	background: rgba(255, 161, 208, 0.04);
+	color: var(--color-accent);
+}
+
+/* When nav open — expand */
+.nav.nav-open .nav-links,
+.nav-links.open {
+	max-height: 400px; /* large enough for a few items, scales */
+	padding-bottom: var(--space-md);
+}
+
+/* Animate hamburger to X when open */
+.nav.nav-open .hamburger span:nth-child(1) {
+	transform: translateY(6px) rotate(45deg);
+}
+.nav.nav-open .hamburger span:nth-child(2) {
+	opacity: 0;
+}
+.nav.nav-open .hamburger span:nth-child(3) {
+	transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Desktop and larger screens: show horizontal nav, hide toggle */
+@media (min-width: 700px) {
+	.nav-toggle { display: none; }
+	.nav-links {
+		position: static;
+		flex-direction: row;
+		max-height: none;
+		padding: 0;
+		background: transparent;
+	}
+	/* give horizontal breathing room between links on desktop */
+	.nav-links a { padding: 0.5rem 0.75rem; }
 }
