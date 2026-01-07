@@ -96,11 +96,27 @@
 }
 
 .project-card {
-	background: var(--color-bg-alt);
-	border-radius: 16px;
-	overflow: hidden;
-	transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(252, 66, 137, 0.144) 50%, rgba(255,255,255,0) 100%);     
+    backdrop-filter: blur(10px);               
+    -webkit-backdrop-filter: blur(10px);     
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #fff;                       
 }
+
+/* Hover más destacado */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+/* Imagen dentro de la tarjeta sigue escalando al pasar el mouse */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
 
 .project-card-link {
 	text-decoration: none;
