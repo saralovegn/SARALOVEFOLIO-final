@@ -412,7 +412,6 @@ function initMobileNav() {
 window.cleanupScrollObservers = () => {
 	singleObserver.disconnect();  // Stop observing all elements
 	staggerObserver.disconnect();
-	console.log('🧹 Observers cleaned up');
 };
 
 /* --------------------------------------------------------------------------

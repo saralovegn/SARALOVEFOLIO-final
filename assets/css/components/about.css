@@ -1,0 +1,59 @@
+/* --------------------------------------------------------------------------
+   About Section
+   -------------------------------------------------------------------------- */
+.about {
+	background: var(--color-bg-alt);
+	position: relative;
+	overflow: hidden;
+}
+
+/* Parallax background layer */
+.about .parallax-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background: linear-gradient(135deg, rgba(255, 163, 206, 0.05) 0%, rgba(255, 163, 206, 0.02) 100%);
+	transform: translateY(0);
+	will-change: transform;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.about .container {
+	position: relative;
+	z-index: 1;
+}
+
+.about .section-title {
+	text-align: left;
+}
+
+.about-grid {
+	display: grid;
+	gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+	.about-grid {
+		grid-template-columns: 1fr 1fr;
+		align-items: start;
+	}
+}
+
+.about-text p {
+	margin-bottom: var(--space-md);
+	color: var(--color-text-muted);
+}
+
+/* Style specifically for the About section image */
+.about .project-image img {
+	border-radius: 16px;
+	display: block;
+}
+
+/* Animate skill bars when revealed */
+[data-reveal-stagger].revealed .skill-fill {
+	width: var(--fill);
+}

@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+	display: inline-block;
+	padding: var(--space-sm) var(--space-lg);
+	background: var(--color-accent);
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	border-radius: 8px;
+	transition: background 0.3s, transform 0.3s;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 40%;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0) 100%);
+	transform: translateX(-120%) skewX(-20deg);
+	transition: transform 0.6s cubic-bezier(.2,.9,.2,1);
+	pointer-events: none;
+}
+
+.btn:hover,
+.btn:focus {
+	background: var(--color-accent-hover);
+	transform: translateY(-2px);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+	transform: translateX(220%) skewX(-20deg);
+}

@@ -1,0 +1,76 @@
+/* --------------------------------------------------------------------------
+   Infinite Auto-scrolling Carousel (CSS-only)
+   -------------------------------------------------------------------------- */
+.infinite-carousel-container {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.infinite-carousel-track {
+	display: flex;
+	gap: var(--space-md);
+	animation: scroll-infinite 30s linear infinite;
+	will-change: transform;
+}
+
+.infinite-carousel-track:hover {
+	animation-play-state: paused;
+}
+
+.carousel-slide {
+	flex: 0 0 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 300px;
+}
+
+.carousel-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 16px;
+	display: block;
+}
+
+/* Tablet: 2 images visible */
+@media (min-width: 640px) {
+	.carousel-slide {
+		flex: 0 0 calc(50% - var(--space-md) / 2);
+		min-height: 350px;
+	}
+	
+	.infinite-carousel-track {
+		gap: var(--space-lg);
+	}
+}
+
+/* Desktop: 3 images visible */
+@media (min-width: 1024px) {
+	.carousel-slide {
+		flex: 0 0 calc(33.333% - var(--space-lg) * 2 / 3);
+		min-height: 400px;
+	}
+	
+	.infinite-carousel-track {
+		gap: var(--space-xl);
+	}
+}
+
+/* Keyframe animation for infinite horizontal scroll */
+@keyframes scroll-infinite {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.infinite-carousel-track {
+		animation: none;
+	}
+}
