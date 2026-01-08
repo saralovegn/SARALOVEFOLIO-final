@@ -89,11 +89,15 @@ The design is visually rich, focusing on dark mode with accent colors, interacti
 
 ### Typography
 
-<!-- What fonts/typeface approach will you use? -->
+Display font: Zalando Sans Expanded (headings, logo, hero text)
+Body font: Helvetica Neue (paragraphs, UI elements)
+Monospace: Ubuntu Mono (specific use cases)
 
 ### Inspiration/References
 
-<!-- List 2-3 websites or designs that inspire your approach -->
+https://www.framer.com/marketplace/templates/porto/
+https://www.lokasasmita.com/
+https://www.rylanphillips.com/
 
 ---
 
@@ -120,9 +124,15 @@ The design is visually rich, focusing on dark mode with accent colors, interacti
 
 ### What excites you most about this project?
 
+What excites me the most about this project is that I am going to be able to create my own websites. Little by little I am understanding the world of coding. There are still a lot of things I do not understand and thanks to copilot, the problems I face get resolved and I learn from the editing it made in my code. 
+
 ### What challenges do you anticipate?
 
+I am excited to work on my future organization. I learned that in this line of work, organizastion is key, having a structure and hirarchy. I believe my organization in this repo could have been better. 
+
 ### How does this project connect to your learning goals?
+
+This project directly connects to my learning goals by helping me build confidence in writing and understanding code. It allows me to practice structuring real projects, experimenting with layout, animations, and responsive design, and learning how to debug and improve my work over time. 
 
 ---
 
