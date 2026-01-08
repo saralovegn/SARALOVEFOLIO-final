@@ -26,6 +26,8 @@
 .nav-logo {
 	font-size: var(--text-xl);
 	font-weight: 700;
+	font-family: "Zalando Sans Expanded", sans-serif;
+	font-optical-sizing: auto;
 	color: var(--color-text);
 	text-decoration: none;
 	transition: all 0.3s ease;

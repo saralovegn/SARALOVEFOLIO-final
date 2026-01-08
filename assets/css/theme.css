@@ -73,7 +73,7 @@
 	 * value when referencing the token to remain resilient in older setups.
 	 */
     /* ===== TYPOGRAPHY ===== */
-	--font-display: 'BBH Bogle', 'Poppins', 'Noto Sans', sans-serif;
+	--font-display: "Zalando Sans Expanded", sans-serif;
 	--letter-spacing-display: 0.08em; /* increased kerning for display headings */
 
 	/* Body / UI sans stack: prefer Helvetica for body text per request */

@@ -108,6 +108,8 @@
 .hero-title {
 	font-size: clamp(4rem, 15vw, 10rem);
 	font-weight: 700;
+	font-family: "Zalando Sans Expanded", sans-serif;
+	font-optical-sizing: auto;
 	letter-spacing: 0.08em;
 	margin: 0 0 var(--space-md) 0;
 	color: #ffffff;
