@@ -5,8 +5,6 @@ https://saralovegn.github.io/SARALOVEFOLIO-final/
 
 ---
 
-# SARA LOVE — Graphic Design Portfolio
-
 A personal portfolio website for my graphic design and illustration work, built using semantic HTML5, modular CSS, and vanilla JavaScript for the core structure and interactions. More complex features, such as the interactive hero section, required a deeper understanding of JavaScript and were developed with guidance and problem-solving support from Copilot.
 
 ## Project Overview
