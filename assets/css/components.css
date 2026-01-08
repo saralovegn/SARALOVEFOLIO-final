@@ -971,50 +971,15 @@
 }
 
 /* --------------------------------------------------------------------------
-   CONTACT SECTION - Parallax Video Background
+   CONTACT SECTION
    -------------------------------------------------------------------------- */
 
-.contact-parallax {
-	position: relative;
-	overflow: hidden;
-	min-height: 100vh; 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.contact {
+	background: transparent;
 	text-align: center;
 }
 
-.contact-video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: 0;
-	will-change: transform;
-	opacity: 0.85;
-}
-
-.contact-parallax .container {
-	position: relative;
-	z-index: 2;
-	max-width: 900px;
-}
-
-.contact-parallax::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(
-		135deg,
-		rgba(10, 10, 10, 0.7) 0%,
-		rgba(26, 26, 46, 0.8) 100%
-	);
-	z-index: 1;
-}
-
-.contact-parallax .section-title {
+.contact .section-title {
 	color: var(--color-text);
 	margin-bottom: var(--space-xl);
 	font-size: clamp(2.5rem, 8vw, 5rem);
@@ -1076,14 +1041,6 @@
 	width: 100%;
 }
 
-/* Mobile-first safety */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-	.contact-video {
-		height: 100%;
-	}
-	
-	.social-links {
-		flex-direction: column;
-		gap: var(--space-md);
-	}
 }

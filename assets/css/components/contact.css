@@ -2,7 +2,7 @@
    Contact Section
    -------------------------------------------------------------------------- */
 .contact {
-	background: var(--color-bg-alt);
+	background: transparent;
 	text-align: center;
 }
 
@@ -10,6 +10,21 @@
 	font-size: var(--text-lg);
 	color: var(--color-text-muted);
 	margin-bottom: var(--space-lg);
+}
+
+.contact-intro {
+	font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+	color: var(--color-text-muted);
+	max-width: 600px;
+	line-height: 1.6;
+	margin: 0 auto var(--space-md);
+}
+
+.contact-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-lg);
 }
 
 .social-links {
@@ -20,54 +35,44 @@
 }
 
 .social-links a {
-	color: var(--color-text-muted);
-	transition: color 0.3s;
-}
-
-.social-links a:hover {
 	color: var(--color-accent);
-}
-
-/* --------------------------------------------------------------------------
-   Contact Parallax Video Background
-   -------------------------------------------------------------------------- */
-.contact-parallax {
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: var(--text-sm);
+	transition: all 0.3s ease;
 	position: relative;
-	overflow: hidden;
-	min-height: 100vh; 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: var(--space-xs) 0;
 }
 
-.contact-video {
+.social-links a::after {
+	content: '';
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--color-accent);
+	transition: width 0.3s ease;
+	box-shadow: 0 0 8px var(--color-accent);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+	color: var(--color-accent-hover);
+	text-shadow: 0 0 10px rgba(255, 163, 206, 0.5);
+}
+
+.social-links a:hover::after,
+.social-links a:focus::after {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	z-index: 0;
-	will-change: transform;
-	opacity: 1;
 }
 
-.contact-parallax .container {
-	position: relative;
-	z-index: 1;
-}
-
-.contact-parallax::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.05); 
-	z-index: 0;
-}
-
-/* Mobile-first safety */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-	.contact-video {
-		height: 100%;
+	.social-links {
+		flex-direction: column;
+		gap: var(--space-md);
 	}
 }

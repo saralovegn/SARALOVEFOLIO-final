@@ -733,3 +733,151 @@ document.addEventListener('DOMContentLoaded', () => {
 		animate();
 	});
 });
+
+/* ==========================================================================
+   GLOBAL FLOATING PARTICLES EFFECT
+   
+   Subtle ambient background particles that float across the entire website.
+   Designed to be minimal, elegant, and non-intrusive.
+   
+   Features:
+   - Soft, slow-moving particles with gentle random drift
+   - Uses brand accent color (pink) at low opacity
+   - Respects prefers-reduced-motion
+   - Lightweight and performant
+   - Fixed global canvas behind all content
+   ========================================================================== */
+
+class GlobalFloatingParticles {
+	constructor(canvasId) {
+		this.canvas = document.getElementById(canvasId);
+		if (!this.canvas) return;
+		
+		this.ctx = this.canvas.getContext('2d');
+		this.particles = [];
+		this.animationId = null;
+		
+		// Check for reduced motion preference
+		this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		
+		// Configuration
+		this.config = {
+			particleCount: window.innerWidth < 768 ? 15 : 25, // Fewer on mobile
+			minRadius: 1,
+			maxRadius: 3,
+			minOpacity: 0.2,
+			maxOpacity: 0.5,
+			baseSpeed: this.reducedMotion ? 0.05 : 0.15, // Very slow drift
+			color: '255, 163, 206' // RGB for pink accent
+		};
+		
+		this.init();
+	}
+	
+	init() {
+		this.resize();
+		this.createParticles();
+		
+		// Handle window resize
+		window.addEventListener('resize', () => {
+			this.resize();
+			// Adjust particle count on resize
+			const newCount = window.innerWidth < 768 ? 15 : 25;
+			if (newCount !== this.config.particleCount) {
+				this.config.particleCount = newCount;
+				this.createParticles();
+			}
+		});
+		
+		// Listen for motion preference changes
+		window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+			this.reducedMotion = e.matches;
+			this.config.baseSpeed = this.reducedMotion ? 0.05 : 0.15;
+		});
+		
+		this.animate();
+	}
+	
+	resize() {
+		this.canvas.width = window.innerWidth;
+		this.canvas.height = window.innerHeight;
+	}
+	
+	createParticles() {
+		this.particles = [];
+		
+		for (let i = 0; i < this.config.particleCount; i++) {
+			this.particles.push({
+				x: Math.random() * this.canvas.width,
+				y: Math.random() * this.canvas.height,
+				radius: this.config.minRadius + Math.random() * (this.config.maxRadius - this.config.minRadius),
+				opacity: this.config.minOpacity + Math.random() * (this.config.maxOpacity - this.config.minOpacity),
+				// Very gentle velocity for slow floating
+				vx: (Math.random() - 0.5) * this.config.baseSpeed,
+				vy: (Math.random() - 0.5) * this.config.baseSpeed,
+				// Slight pulsing effect
+				pulseSpeed: 0.001 + Math.random() * 0.002,
+				pulsePhase: Math.random() * Math.PI * 2
+			});
+		}
+	}
+	
+	updateParticles() {
+		this.particles.forEach(particle => {
+			// Update position with slow drift
+			particle.x += particle.vx;
+			particle.y += particle.vy;
+			
+			// Subtle pulsing opacity (very gentle)
+			particle.pulsePhase += particle.pulseSpeed;
+			const pulseFactor = Math.sin(particle.pulsePhase) * 0.1 + 1; // 0.9 to 1.1
+			
+			// Wrap around screen edges
+			if (particle.x < -10) particle.x = this.canvas.width + 10;
+			if (particle.x > this.canvas.width + 10) particle.x = -10;
+			if (particle.y < -10) particle.y = this.canvas.height + 10;
+			if (particle.y > this.canvas.height + 10) particle.y = -10;
+			
+			// Store adjusted opacity for rendering
+			particle.currentOpacity = Math.min(this.config.maxOpacity, particle.opacity * pulseFactor);
+		});
+	}
+	
+	draw() {
+		// Clear canvas
+		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		
+		// Draw particles
+		this.particles.forEach(particle => {
+			this.ctx.beginPath();
+			this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+			this.ctx.fillStyle = `rgba(${this.config.color}, ${particle.currentOpacity})`;
+			this.ctx.fill();
+			
+			// Optional: very subtle glow
+			this.ctx.shadowBlur = 8;
+			this.ctx.shadowColor = `rgba(${this.config.color}, ${particle.currentOpacity * 0.5})`;
+			this.ctx.fill();
+			this.ctx.shadowBlur = 0; // Reset shadow
+		});
+	}
+	
+	animate() {
+		// Skip animation if reduced motion is preferred
+		if (this.reducedMotion) {
+			// Still draw particles, just don't animate them
+			this.draw();
+			return;
+		}
+		
+		this.updateParticles();
+		this.draw();
+		
+		this.animationId = requestAnimationFrame(() => this.animate());
+	}
+}
+
+// Initialize global floating particles when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+	const globalParticles = new GlobalFloatingParticles('globalParticles');
+});
