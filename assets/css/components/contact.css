@@ -49,7 +49,7 @@
 	object-fit: cover;
 	z-index: 0;
 	will-change: transform;
-	opacity: 0.9;
+	opacity: 1;
 }
 
 .contact-parallax .container {
@@ -61,7 +61,7 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.5); 
+	background: rgba(0, 0, 0, 0.05); 
 	z-index: 0;
 }
 

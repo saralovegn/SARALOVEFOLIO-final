@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sara Love - Graphic Design & Illustration Portfolio</title>
+    <meta name="description" content="Sara Love Gancedo - Graphic designer and illustrator creating meaningful visual experiences">
     <link href="" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
 	<!-- Navigation -->
 	<nav class="nav" role="navigation" aria-label="Primary">
 		<div class="nav-container">
-			<a href="#" class="nav-logo">SARA LOVE</a>
+			<a href="#" class="nav-logo">SLOVE</a>
 
 			<!-- Hamburger (visible on small screens) -->
 			<button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
@@ -39,14 +40,13 @@
 	</nav>
 
 	<main id="main">
-		<!-- Hero Section -->
+		<!-- Hero Section with Particle Network -->
 		<section id="hero" class="hero">
-			<div class="hero-bg parallax-bg">
-				<video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
-					<source src="https://ik.imagekit.io/saralove/MP4.mp4" type="video/mp4">
-				</video>
+			<canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+			<div class="hero-content">
+				<h1 class="hero-title">SARA LOVE</h1>
+				<p class="hero-subtitle">Graphic Design & Illustration</p>
 			</div>
-			
 			<div class="scroll-indicator">
 				<div class="scroll-arrow"></div>
 			</div>
@@ -54,28 +54,29 @@
 
 		<!-- About Section -->
 		<section id="about" class="section about">
+			<canvas class="section-particles" aria-hidden="true" data-section="about"></canvas>
 			<div class="container">
-				<h2 class="section-title animate-on-scroll">About Sara Love</h2>
-				<div class="about-grid">
+				<h2 class="section-title animate-on-scroll">HEY, WASSUP</h2>
+				<div class="about-content">
 					<div class="about-text animate-on-scroll">
-						<p>
-							My name is Sara Love Gancedo. I am half American, half Spanish, and a passionate graphic design and illustration student.
+						<p class="about-intro">
+							My name is Sara Love Gancedo. I am half American, half Spanish, and a passionate graphic design and illustration student. My work navigates between minimalism, experimentation, and emotion.
 						</p>
 						<p>
-							I am deeply interested in all areas of creativity and enjoy dedicating myself fully to every project I take on. 
+							I am deeply interested in all areas of creativity and enjoy dedicating myself fully to every project I take on. What I love most is creating visuals that communicate ideas clearly while evoking emotion and creating meaningful experiences.
 						</p>
 						<p>
-							My belief in life is that design should be a way to communicate ideas clearly, evoke emotion, and create meaningful experiences for people.
+							I enjoy designing posters, album covers, and brand identities that dialogue with those who view them. My style is diverse and flexible, capable of adapting to different contexts without losing its identity. Each project is a balance between rigor and freedom, between order and measured chaos.
 						</p>
 					</div>
-					<div class="project-image animate-on-scroll">
-						<img src="https://ik.imagekit.io/saralove/SARAprofesionalpic%20-%20copia.jpeg?updatedAt=1767641410943" alt="Mobile App Landing" loading="lazy" />
+					<div class="about-images animate-on-scroll">
+						<img src="https://ik.imagekit.io/saralove/SARAprofesionalpic%20-%20copia.jpeg?updatedAt=1767641410943" alt="Sara Love portrait" class="about-photo" loading="lazy" />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Projects Section -->
+		<!-- Work Section -->
 		<section id="projects" class="section projects">
 			<div class="container">
 				<h2 class="section-title animate-on-scroll">Work</h2>
@@ -141,6 +142,7 @@
 
 		<!-- Contact Section -->
 <section id="contact" class="section contact contact-parallax">
+	<canvas class="section-particles" aria-hidden="true" data-section="contact"></canvas>
 	<!-- Background video -->
 	<video
 		class="contact-video"
@@ -158,16 +160,16 @@
 
 	<div class="container contact-content-wrapper">
 		<h2 class="section-title animate-on-scroll">
-			Like what you see? Contact me!
+			CONTACT ME
 		</h2>
 
 		<div class="contact-content animate-on-scroll">
-			<p>I want to make your projects a reality. Come on, don't be shy!</p>
-			<a href="mailto:hello@example.com" class="btn btn-primary">Let's talk!</a>
+			<p class="contact-intro">If you're interested in working together, don't hesitate to reach out :)</p>
+			<a href="mailto:hello@saralove.com" class="btn btn-primary">Let's Talk!</a>
 
 			<div class="social-links">
-				<a href="https://github.com/saralovegn">GitHub</a>
-				<a href="https://www.instagram.com/slove_design/">Instagram</a>
+				<a href="https://github.com/saralovegn" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://www.instagram.com/slove_design/" target="_blank" rel="noopener noreferrer">Instagram</a>
 			</div>
 		</div>
 	</div>
