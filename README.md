@@ -5,8 +5,6 @@ https://saralovegn.github.io/SARALOVEFOLIO-final/
 
 ---
 
-# SARA LOVE — Graphic Design Portfolio
-
 A personal portfolio website for my graphic design and illustration work, built using semantic HTML5, modular CSS, and vanilla JavaScript for the core structure and interactions. More complex features, such as the interactive hero section, required a deeper understanding of JavaScript and were developed with guidance and problem-solving support from Copilot.
 
 ## Project Overview
@@ -223,7 +221,6 @@ saralovefolio-final/
 ├── project-inspiration.md
 └── project.yaml
 
-
 ---
 
 ## Local Development
@@ -266,22 +263,20 @@ Double-click index.html
 Note: External resources (CDN images, fonts) require internet connection
 
 # AI Usage Policy
-This project was developed with the assistance of GitHub Copilot (powered by Claude Sonnet 4.5) as a learning and support tool. AI was used throughout the development process in the following ways:
+This project was developed with the assistance of GitHub Copilot, as a learning and support tool. AI was used throughout the development process in the following ways:
 
 How AI Was Used
 Code Generation: Generating boilerplate HTML structure, CSS modules, and JavaScript functions
 Problem Solving: Debugging issues, suggesting alternative implementations, and explaining browser APIs
 Optimization: Refactoring code for performance, accessibility, and maintainability
-Documentation: Writing inline comments, structuring this README, and explaining complex concepts
 Learning Support: Explaining modern CSS techniques (clamp, custom properties, grid/flexbox), JavaScript APIs (IntersectionObserver, Canvas), and web standards
 Educational Intent
-AI served as an interactive tutor and pair programming partner, not as a replacement for understanding. All code was reviewed, tested, and understood before implementation. The learning objectives included:
+AI served as an interactive tutor and pair programming partner, not as a replacement for understanding. All code was reviewed, tested, and somewhat understood before implementation. The learning objectives included:
 
-Understanding modern CSS architecture and design systems
-Mastering vanilla JavaScript and browser APIs
-Implementing accessible and performant web animations
-Writing clean, maintainable, and well-documented code
-Authorship Statement
+- Understanding modern CSS architecture and design systems
+- Mastering vanilla JavaScript and browser APIs
+- Implementing accessible and performant web animations
+
 While AI assisted in code generation and learning, the creative direction, design decisions, content, and final implementation are the work of Sara Love Gancedo. The AI acted as a tool to accelerate development and deepen understanding, similar to using documentation, tutorials, or Stack Overflow, but with interactive guidance.
 
 Transparency
@@ -290,7 +285,7 @@ This README honestly reflects the AI's role in the project. In an academic or pr
 # Credits
 Design & Development: Sara Love Gancedo
 Course: Web Application and Design (4th Year, 1st Semester)
-Institution: Universidad [Name]
+Institution: UDIT
 Year: 2025
 
 Technologies: HTML5, CSS3, Vanilla JavaScript
