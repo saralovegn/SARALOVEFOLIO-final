@@ -10,7 +10,7 @@
 .infinite-carousel-track {
 	display: flex;
 	gap: var(--space-md);
-	animation: scroll-infinite 30s linear infinite;
+	animation: scroll-infinite 20s linear infinite;
 	will-change: transform;
 }
 
