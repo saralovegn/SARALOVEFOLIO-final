@@ -7,11 +7,11 @@ https://saralovegn.github.io/SARALOVEFOLIO-final/
 
 # SARA LOVE — Graphic Design Portfolio
 
-A personal portfolio website for graphic design and illustration work, built with semantic HTML5, modular CSS, and vanilla JavaScript.
+A personal portfolio website for my graphic design and illustration work, built using semantic HTML5, modular CSS, and vanilla JavaScript for the core structure and interactions. More complex features, such as the interactive hero section, required a deeper understanding of JavaScript and were developed with guidance and problem-solving support from Copilot.
 
 ## Project Overview
 
-This is a single-page portfolio website with additional project detail pages, designed to showcase visual design work with a modern, minimalist aesthetic. The site emphasizes interactivity through particle animations, smooth scrolling, and responsive design, while maintaining accessibility and performance best practices.
+This is a single-page portfolio website with additional seperate project detail pages, designed to showcase visual design work with a modern, minimalist and space aesthetic. The site emphasizes interactivity through particle animations, smooth scrolling, and responsive design, while maintaining accessibility and performance best practices.
 
 **Target Audience:** Potential clients, employers, and collaborators in graphic design and illustration.
 
@@ -87,7 +87,7 @@ Consistent spacing scale using CSS custom properties:
 
 ## Key Features
 
-### 1. Interactive Particle Network (Hero Section)
+### 1. Interactive Particle Network (Hero Section) - made possible thanks to copilot (final decisions taken by me)
 - Canvas-based particle system with 80 particles (desktop) / 50 (mobile)
 - Particles connected by lines when within proximity
 - **Mouse interaction:** Particles repel from cursor within 150px radius
