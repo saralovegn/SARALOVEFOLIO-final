@@ -71,7 +71,7 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+	background: #000000;
 }
 
 /* Particle Canvas Background */
@@ -231,7 +231,7 @@
    ABOUT SECTION - Bold Typography & Spacious Layout
    -------------------------------------------------------------------------- */
 .about {
-	background: var(--color-bg-alt);
+	background: #000000;
 	position: relative;
 	overflow: hidden;
 }
@@ -357,7 +357,7 @@
    7. About Section
    -------------------------------------------------------------------------- */
 .about {
-	background: var(--color-bg-alt);
+	background: #000000;
 }
 
 .about .section-title {
@@ -531,7 +531,7 @@
 /* Fallback for browsers without backdrop-filter support */
 @supports not (backdrop-filter: blur(12px)) {
 	.project-card {
-		background: rgba(30, 30, 40, 0.9);
+		background: rgba(20, 20, 20, 0.6);
 	}
 }
 
@@ -540,7 +540,7 @@
    9. Contact Section
    -------------------------------------------------------------------------- */
 .contact {
-	background: var(--color-bg-alt);
+	background: #000000;
 	text-align: center;
 }
 

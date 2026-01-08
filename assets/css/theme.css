@@ -99,15 +99,15 @@
 	/*
 	 * COLOR PALETTE
 	 *
-	 * Dark theme with indigo accent. Limited palette = cohesive design.
-	 * Semantic naming (bg, text, accent) makes colors self-documenting.
+	 * Pure black aesthetic for modern graphic design portfolio.
+	 * High contrast with minimal color for focus on visual work.
 	 */
-	--color-bg: #131313;              /* Near-black background */
-	--color-bg-alt: #242424;          /* Slightly lighter for depth/sections */
-	--color-text: #f5f5f5;            /* Off-white for readability (not pure white) */
-	--color-text-muted: #ffe2f1;      /* Subdued text for secondary content */
-	--color-accent: #ffa1d0;          /* Indigo — primary brand color */
-	--color-accent-hover: #ff47a3;    /* Lighter indigo for hover states */
+	--color-bg: #000000;              /* Pure black background */
+	--color-bg-alt: #000000;          /* Pure black for seamless sections */
+	--color-text: #ffffff;            /* Pure white for maximum contrast */
+	--color-text-muted: #cccccc;      /* Light gray for secondary content */
+	--color-accent: #ffa1d0;          /* Pink accent — primary brand color */
+	--color-accent-hover: #ff47a3;    /* Lighter pink for hover states */
 
 	/*
 	 * ANIMATION TOKENS
